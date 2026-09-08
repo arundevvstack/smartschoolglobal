@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+    --primary: #2563eb;
+    --primary-foreground: #ffffff;
+    --primary-dark: #1d4ed8;
+    --ai-cyan: #06b6d4;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --destructive: #ef4444;
+    --muted: #f8fafc;
+    --muted-foreground: #475569;
+    --accent: #f1f5f9;
+    --accent-foreground: #0f172a;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #2563eb;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: #e2e8f0;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Crisp Interactive Hover Classes */
+.btn-primary-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-primary-hover:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+.btn-primary-hover:active {
+  transform: translateY(0px);
+}
+
+.btn-secondary-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-secondary-hover:hover {
+  background-color: #f8fafc;
+  border-color: #2563eb;
+  color: #1d4ed8;
+  box-shadow: 0 2px 8px 0 rgba(15, 23, 42, 0.06);
+  transform: translateY(-1px);
+}
+.btn-secondary-hover:active {
+  transform: translateY(0px);
+}
+
+.card-hover-effect {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-effect:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  transform: translateY(-2px);
+}
+
+.tab-pill-hover {
+  transition: all 0.15s ease-in-out;
+}
+.tab-pill-hover:hover {
+  transform: scale(1.02);
+}
+
+.ai-glow-border {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.2), 0 4px 12px rgba(6, 182, 212, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+}
